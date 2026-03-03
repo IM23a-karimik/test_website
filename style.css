@@ -1,0 +1,264 @@
+/* --- FARBEN & GRUNDLAGEN --- */
+:root {
+    --green: #71857C;
+    --creme: #EEEFEA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--green);
+    background-color: var(--creme);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* --- TYPOGRAFIE --- */
+h1, h2, h3, h4, .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 40px;
+}
+
+.highlight-text {
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
+
+.signature {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.text-center { text-align: center; }
+.margin-top-large { margin-top: 60px; }
+
+/* --- SEKTIONEN & CONTAINER --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-creme {
+    background-color: var(--creme);
+    color: var(--green);
+    padding: 100px 0;
+}
+
+.section-green {
+    background-color: var(--green);
+    color: var(--creme);
+    padding: 100px 0;
+}
+
+.text-block p {
+    margin-bottom: 20px;
+}
+.text-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.btn-nav {
+    border: 1px solid var(--green);
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-logo {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--green);
+    color: var(--creme);
+    text-decoration: none;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--green);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--green);
+}
+
+.section-green .btn-primary {
+    background-color: var(--creme);
+    color: var(--green);
+    border-color: var(--creme);
+}
+
+.section-green .btn-primary:hover {
+    background-color: transparent;
+    color: var(--creme);
+}
+
+/* --- GRID LAYOUTS --- */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.grid-item p {
+    margin-bottom: 20px;
+}
+
+/* --- PREISE & FORMATE --- */
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.price-card {
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card.outline {
+    border: 1px solid var(--green);
+}
+
+.price-card.filled {
+    background-color: var(--green);
+    color: var(--creme);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-card p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* ZUSATZTAG CARD */
+.addon-card {
+    border: 1px dashed var(--green);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- TERMS --- */
+.terms-text {
+    font-size: 0.9rem;
+}
+
+.terms-text p {
+    margin-bottom: 15px;
+}
+
+/* --- RESPONSIVE DESIGN (Handy) --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    h1 { font-size: 2.5rem; }
+    .grid-2-col, .pricing-grid { grid-template-columns: 1fr; gap: 40px; }
+    .price-card { padding: 30px; }
+    .hero { padding: 20px; }
+}
