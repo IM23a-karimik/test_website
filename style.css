@@ -262,3 +262,39 @@ nav {
     .price-card { padding: 30px; }
     .hero { padding: 20px; }
 }
+
+/* --- LOGO IN DER NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Zentriert Logo und Menü vertikal auf einer Linie */
+    padding: 20px 4%; /* Etwas weniger seitlicher Abstand, damit es näher in der Ecke ist */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-logo-img {
+    height: 90px; /* Deutlich größer als 50px, damit man den Text im Logo lesen kann */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Weicher Effekt für Hover */
+}
+
+.nav-logo a:hover .nav-logo-img {
+    transform: scale(1.03); /* Das Logo wird beim Drüberfahren minimal größer */
+}
+
+/* --- RESPONSIVE DESIGN (Handy) --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 5%; /* Auf dem Handy etwas engerer Abstand zum Rand */
+    }
+
+    .nav-logo-img {
+        height: 70px; /* Auf dem Handy etwas verkleinern, damit es nicht zu dominant ist */
+    }
+}
