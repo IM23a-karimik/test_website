@@ -372,3 +372,43 @@ nav.scrolled .nav-logo-img {
         font-size: 1.5rem; /* Größere Schrift auf dem Handy-Menü */
     }
 }
+
+/* --- BILDER & PLATZHALTER --- */
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Sanfter, edler Schatten */
+    transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover {
+    transform: translateY(-5px); /* Minimales Anheben, wenn man mit der Maus darüber fährt */
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Spezifische Bildformate */
+.wide-image {
+    max-height: 450px; /* Begrenzt die Höhe, damit breite Bilder nicht riesig werden */
+}
+
+.portrait-image {
+    max-height: 550px;
+    height: 100%;
+}
+
+/* Hilfsklassen für Abstände und Ausrichtung */
+.align-center {
+    align-items: center;
+}
+.margin-bottom-small {
+    margin-bottom: 30px;
+}
+.margin-top-large {
+    margin-top: 60px;
+}
