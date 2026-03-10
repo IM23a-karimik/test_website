@@ -64,8 +64,13 @@ h3 {
     margin-top: 20px;
 }
 
-.text-center { text-align: center; }
-.margin-top-large { margin-top: 60px; }
+.text-center {
+    text-align: center;
+}
+
+.margin-top-large {
+    margin-top: 60px;
+}
 
 /* --- SEKTIONEN & CONTAINER --- */
 .container {
@@ -89,6 +94,7 @@ h3 {
 .text-block p {
     margin-bottom: 20px;
 }
+
 .text-block p:last-child {
     margin-bottom: 0;
 }
@@ -111,7 +117,7 @@ nav {
 nav.scrolled {
     background-color: rgba(238, 239, 234, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
     padding: 10px 4%; /* Wird etwas schmaler */
 }
 
@@ -187,7 +193,9 @@ nav.scrolled .nav-logo-img {
 }
 
 .hero-logo {
-    width: 150px;
+    width: 280px; /* Deutlich grösser als die vorherigen 150px */
+    max-width: 80vw; /* Stellt sicher, dass es auf dem Handy nicht über den Rand ragt */
+    height: auto;
     margin-bottom: 40px;
 }
 
@@ -332,23 +340,53 @@ nav.scrolled .nav-logo-img {
 
 /* --- RESPONSIVE DESIGN (Handy) --- */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    .grid-2-col, .pricing-grid { grid-template-columns: 1fr; gap: 40px; }
-    .price-card { padding: 30px; }
-    .hero { padding: 20px; }
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .grid-2-col, .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .price-card {
+        padding: 30px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
 
     /* Navigation auf Handy anpassen */
-    nav { padding: 15px 5%; }
-    .nav-logo-img { height: 70px; }
-    nav.scrolled .nav-logo-img { height: 50px; }
+    nav {
+        padding: 15px 5%;
+    }
+
+    .nav-logo-img {
+        height: 70px;
+    }
+
+    nav.scrolled .nav-logo-img {
+        height: 50px;
+    }
 
     /* Hamburger Icon anzeigen */
-    .hamburger { display: flex; }
+    .hamburger {
+        display: flex;
+    }
 
     /* Hamburger Kreuz-Animation wenn aktiv */
-    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
     /* Mobile Menu Fullscreen Overlay */
     .nav-links {
@@ -406,9 +444,11 @@ nav.scrolled .nav-logo-img {
 .align-center {
     align-items: center;
 }
+
 .margin-bottom-small {
     margin-bottom: 30px;
 }
+
 .margin-top-large {
     margin-top: 60px;
 }
