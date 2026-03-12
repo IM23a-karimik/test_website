@@ -452,3 +452,53 @@ nav.scrolled .nav-logo-img {
 .margin-top-large {
     margin-top: 60px;
 }
+
+/* --- KONTAKT SEKTION SPEZIAL LAYOUT --- */
+/* Desktop Layout: Wir erzwingen, dass das Bild in der rechten Spalte bleibt */
+.contact-grid {
+    align-items: start; /* Oben ausrichten */
+}
+
+@media (min-width: 769px) {
+    /* Auf Desktop: "Kontakt" rutscht unter "Termin & Rücktritt" in die linke Spalte */
+    .contact-info {
+        grid-column: 1 / 2;
+        margin-top: 60px;
+    }
+
+    /* Das Bild bleibt starr in der rechten Spalte, geht über beide Reihen */
+    .contact-image {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        margin-top: 0; /* Entfernt den Abstand oben auf Desktop */
+    }
+}
+
+/* --- RESPONSIVE DESIGN (Handy) ERGÄNZUNGEN --- */
+@media (max-width: 768px) {
+    /* Mobile Layout: Wir nutzen Flexbox, um die Reihenfolge (order) zu ändern */
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Wir steuern die Abstände manuell */
+    }
+
+    .contact-terms {
+        order: 1; /* Kommt zuerst */
+        margin-bottom: 40px;
+    }
+
+    .contact-image {
+        order: 2; /* Kommt als zweites (zwischen die Texte) */
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .contact-info {
+        order: 3; /* Kommt als letztes */
+    }
+
+    .mobile-margin-top {
+        margin-top: 0; /* Verhindert doppelten Abstand auf Mobile */
+    }
+}
